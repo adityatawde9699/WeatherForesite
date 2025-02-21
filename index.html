@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherForsite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="C:\Users\ASUS\Downloads\vs code\.vscode\Webpages\weather-app\WF.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content"></div>
+            <div class="logo">
+                <img src="C:\Users\ASUS\Downloads\vs code\.vscode\Webpages\weather-app\WF.png" alt="Weather App Logo">
+                <h2>KNOW WEATHER</h2>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#search" class="nav-link"><i class="fas fa-search"></i> Search City</a></li>
+                    <li class="nav-item"><a href="#forecast" class="nav-link"><i class="fas fa-temperature-high"></i> Weather</a></li>
+                    <li class="nav-item"><a href="#details" class="nav-link"><i class="fas fa-wind"></i> Details</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="search" class="search-section">
+            <div class="search-container">
+            <div class="search-box"></div>
+                <input type="text" placeholder="Enter city name..." id="city-search" aria-label="Search for a city">
+                <button class="search-btn" title="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <span class="sr-only">Search</span>
+                </button>
+            </div>
+            <div class="search-history">
+                <h3>Recent Searches</h3>
+                <ul id="recent-searches"></ul>
+                <button class="clear-history" title="Clear history">
+                <i class="fas fa-trash" aria-hidden="true"></i>
+                <span class="sr-only">Clear search history</span>
+                </button>
+            </div>
+            </div>
+        </section>
+        <section id="forecast" class="weather-display">
+            <div class="current-weather card">
+            <h2 class="city-name">
+                <i class="fas fa-map-marker-alt"></i> 
+                Weather in <span class="location">City Name</span> 
+                <span class="country-code"></span>
+            </h2>
+            <div class="weather-info">
+                <div class="temperature-container">
+                <div class="main-temp">
+                    <i class="fas fa-temperature-high"></i>
+                    <span class="temp-value">--</span>°<span class="unit">C</span>
+                    <button class="unit-toggle" title="Toggle temperature unit">
+                    <i class="fas fa-exchange-alt"></i> °C/°F
+                    </button>
+                </div>
+                <p class="feels-like">
+                    <i class="fas fa-thermometer-half"></i>
+                    Feels like: <span class="feels-value">--</span>°<span class="unit">C</span>
+                </p>
+                <p class="min-max">
+                    <span class="min"><i class="fas fa-arrow-down"></i> Low: --°C</span> | 
+                    <span class="max"><i class="fas fa-arrow-up"></i> High: --°C</span>
+                </p>
+                </div>
+                <div class="weather-status">
+                <img class="weather-icon" src="" alt="Weather condition icon">
+                <p class="description">Weather Description</p>
+                </div>
+            </div>
+            <p class="last-updated"><i class="fas fa-clock"></i> Updated: <time datetime=""></time></p>
+            </div>
+
+            <div class="forecast-container card">
+            <h3><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h3>
+            <div class="forecast-grid" role="list">
+                <!-- JS will populate forecast cards here -->
+            </div>
+            </div>
+
+            <div class="hourly-forecast card">
+            <h3><i class="fas fa-clock"></i> 24-Hour Forecast</h3>
+            <div class="hourly-scroll">
+                <button class="scroll-left" aria-label="View previous hours">
+                <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="hourly-cards" role="list">
+                <!-- JS will populate hourly forecast here -->
+                </div>
+                <button class="scroll-right" aria-label="View next hours">
+                <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            </div>
+        </section>
+
+        <section id="details" class="weather-details">
+            <div class="details-grid">
+            <div class="detail-card">
+                <h3><i class="fas fa-wind" aria-hidden="true"></i> Wind</h3>
+                <div class="detail-content">
+                <span id="wind-speed">-- km/h</span>
+                <div class="wind-direction">
+                    <i class="fas fa-location-arrow" aria-hidden="true"></i>
+                    <span id="wind-direction"></span>
+                </div>
+                </div>
+            </div>
+            <div class="detail-card">
+                <h3><i class="fas fa-tint" aria-hidden="true"></i> Humidity</h3>
+                <div class="detail-content">
+                <span id="humidity">--%</span>
+                <div class="humidity-bar" role="progressbar" aria-label="Humidity level" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                    <div class="humidity-fill"></div>
+                </div>
+                </div>
+            </div>
+            <div class="detail-card">
+                <h3><i class="fas fa-compress-alt" aria-hidden="true"></i> Pressure</h3>
+                <div class="detail-content">
+                <span id="pressure">-- hPa</span>
+                <span class="trend"></span>
+                </div>
+            </div>
+            <div class="detail-card">
+                <h3><i class="fas fa-eye" aria-hidden="true"></i> Visibility</h3>
+                <div class="detail-content">
+                <span id="visibility">-- km</span>
+                <span class="visibility-condition"></span>
+                </div>
+            </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Weather Forecast App</h4>
+                <p>Your reliable source for accurate weather updates</p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2023 Weather Forecast App | All Rights Reserved</p>
+                <p><small>Powered by OpenWeather API</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
