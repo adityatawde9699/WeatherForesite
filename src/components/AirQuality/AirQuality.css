@@ -1,0 +1,76 @@
+.aqi-container {
+    padding: 2.5rem;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 91, 234, 0.08);
+}
+
+.air-quality {
+    margin: 2rem auto;
+}
+
+.air-quality h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.air-quality-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.aqi-indicator {
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    min-width: 100px;
+}
+
+.aqi-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.aqi-text {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.aqi-details {
+    flex: 1;
+}
+
+.aqi-details p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.aqi-details p:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .air-quality {
+        margin: 1rem auto;
+    }
+
+    .air-quality-card {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .aqi-indicator {
+        width: 100%;
+    }
+}

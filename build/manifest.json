@@ -1,0 +1,55 @@
+{
+  "short_name": "WeatherForesite",
+  "name": "WeatherForesite - Real-time Weather Forecasts",
+  "icons": [
+    {
+      "src": "WF.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "WF.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "WF.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#4285f4",
+  "background_color": "#ffffff",
+  "description": "Real-time weather forecasts and conditions for cities worldwide",
+  "shortcuts": [
+    {
+      "name": "Current Weather",
+      "short_name": "Current",
+      "description": "View current weather",
+      "url": "/#forecast"
+    },
+    {
+      "name": "Search Location",
+      "short_name": "Search",
+      "description": "Search for a city",
+      "url": "/#search"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshot2.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+} 

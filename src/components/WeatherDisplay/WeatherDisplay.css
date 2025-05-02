@@ -1,0 +1,99 @@
+.weather-display {
+  margin: 2rem auto;
+}
+
+.current-weather {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.city-name {
+  font-size: 1.5rem;
+  margin: 0 0 1.5rem;
+  color: #333;
+}
+
+.city-name svg {
+  color: #4b6cb7;
+  margin-right: 0.5rem;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.temperature-container {
+  flex: 1;
+  min-width: 200px;
+}
+
+.main-temp {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: flex-start;
+}
+
+.temp-value {
+  line-height: 1;
+}
+
+.unit {
+  font-size: 2rem;
+  margin-left: 5px;
+}
+
+.feels-like {
+  margin: 0.5rem 0 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.weather-status {
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
+}
+
+.weather-status img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  margin: 0;
+  color: #4b6cb7;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .current-weather {
+    padding: 1.5rem;
+  }
+
+  .city-name {
+    font-size: 1.3rem;
+  }
+
+  .main-temp {
+    font-size: 3rem;
+  }
+
+  .unit {
+    font-size: 1.6rem;
+  }
+
+  .weather-status img {
+    width: 80px;
+    height: 80px;
+  }
+}
